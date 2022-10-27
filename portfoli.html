@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" 
+    rel="stylesheet">
+
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        html,body{
+            width: 100%;
+            height: 100%;
+
+        }
+
+        #wrapper{
+            width: 100%;
+            min-height: 100vh;
+            background-color:black;
+            overflow: hidden !important;
+
+        }
+
+        #section1{
+            width: 100%;
+            min-height: 500vh;
+           
+        }
+
+        .navbar{
+            width: 100%;
+            height: 15vh;
+       
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            border-bottom: 3px solid red;
+
+        }
+
+        .menue{
+    
+        
+            
+        }
+
+        .menue>a{
+            font-size: 1.8vw;
+            padding: 1.8vw;
+            text-decoration: none;
+            color: red;
+            font-family: 'Century Gothic Std';
+            
+        }
+
+        .ri-copyright-fill{
+            font-size: 5vw;
+            color: red;
+           
+        } 
+        .logo{
+            padding-left: 6vw;
+            
+        }  
+        .tags{
+         
+            margin-right: 2vw;
+        }
+        .tags>a{
+            text-decoration: none;
+            padding:2vw;
+            font-size: 1.5vw;
+            color: red;
+           font-family: 'Century Gothic Std';
+         
+            
+        }
+
+        #photogallery{
+            width: 100%;
+            height: calc(500vh - 15vh);
+            overflow-x: hidden !important;
+            position: relative;
+        
+        }
+
+        #photogallery>h1{
+            font-size: 7vw;
+            text-align: center;
+            top: 170px;
+            left: 80px;
+            color: red;
+            position: absolute;
+         
+            font-family: 'monument';
+        }
+
+      
+
+        .photus{
+            
+            width: 350px;
+            height: 450px;
+            background-size: cover;
+        
+
+        }
+
+
+        #one{
+            left: 270px;
+            background-image: url("one4.jpg");
+            position: absolute;
+            top: 800px;
+        }
+
+        #two{
+            left: 760px;
+            top: 1300px;
+            position: absolute;
+            background-image: url("elia-pellegrini-K_sHB0RTsDA-unsplash.jpg");
+         
+        }
+
+        #three{
+            left: 140px;
+            top: 2240px;
+            position: absolute;
+          background-image: url("THE CHIC DEPARTMENT.jpg");
+        }
+
+        #four{
+            position: absolute;
+            right: 160px;
+            top: 2700px;
+            background-image: url("Sophie Skloss for Red Thread Journal.jpg");
+        }   
+
+                
+        #cursor{
+        width: 70px;
+        height: 70px;
+        background-color:red;
+        mix-blend-mode: difference;
+        border-radius: 50%;
+
+
+        position:fixed;
+        z-index: 999;
+
+
+
+
+        transition-timing-function: ease-in-out;
+        transition: 0.1s;
+
+        }
+
+
+
+
+        @media screen and (max-width: 570px) {
+            
+            #wrapper{
+                background-color: pink;
+            }
+
+            #one{
+            left: 100px;
+            background-image: url("khaled-ghareeb-MOXm5jc8I0A-unsplash.jpg");
+            position: absolute;
+            top: 550px;
+        }
+
+        #two{
+            left: 20px;
+            top: 970px;
+            position: absolute;
+            background-image: url("igor-rand-qGQfRP9-olI-unsplash.jpg");
+            
+        }
+
+        #three{
+            left: 170px;
+            top: 1480px;
+            position: absolute;
+          background-image: url("elia-pellegrini-K_sHB0RTsDA-unsplash.jpg");
+        }
+
+        #four{
+            position: absolute;
+            left: 50px;
+            top: 2030px;
+            background-image: url("mahdi-chaghari-tpJes_AdSyg-unsplash.jpg");
+        }  
+        
+        
+        .menue>a{
+            font-size: 2vw;
+            padding: 2.5vw;
+           
+            
+        }
+
+        .ri-copyright-fill{
+            font-size: 10vw;
+            
+           
+        } 
+        .logo{
+      
+            
+        }  
+        .tags{
+         
+        }
+        .tags>a{
+           
+            padding:2.3vw;
+            font-size: 2.2vw;
+           
+         
+            
+        }
+        #cursor{
+            mix-blend-mode:difference;
+            width: 30px;
+            height: 30px;
+        }
+}
+        
+        
+    </style>
+</head>
+<body>
+
+    <div id="cursor">
+
+    </div>  
+    <div id="wrapper"   data-scroll-container >
+        
+
+        <div id="section1"  >
+
+            <nav class="navbar">
+
+
+                <div class="menue">
+
+                    <a href="#menue">Menue</a>
+                    </div>
+
+                <div class="logo"><i class="ri-copyright-fill"></i></div>
+
+                <div class="tags">
+                    <a href="hscroll.html">Home</a>
+                    <a href="hscroll.html">About</a>
+                </div>
+
+
+            </nav>
+
+         <!--    data-scroll-direction="horizontal" -->
+
+            <div id="photogallery">
+
+                <h1 data-scroll data-scroll-speed="4" >Nabeel Ali kHan  <br> Web designer <br>Based <br> in&nbsp;&nbsp;TBILISI </h1>
+
+                <div  class="photus"  id="one" >
+
+                </div>
+
+                <div  class="photus"    id="two"    >
+
+                </div>
+
+                <div  class="photus" id="three" >
+
+                </div>
+
+                <div  class="photus" id="four"   >
+                </div>
+
+            </div>
+
+
+
+        </div>
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+
+     
+ <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+
+
+ <script>
+
+const scroller = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true,
+    multiplixer:0.25
+    
+})
+
+gsap.registerPlugin(ScrollTrigger)
+
+
+scroller.on('scroll', ScrollTrigger.update)
+
+ScrollTrigger.scrollerProxy(
+    '#wrapper', {
+        scrollTop(value) {
+            return arguments.length ?
+            scroller.scrollTo(value, 0, 0) :
+            scroller.scroll.instance.scroll.y
+        },
+        getBoundingClientRect() {
+            return {
+                left: 0, top: 0, 
+                width: window.innerWidth,
+                height: window.innerHeight
+            }
+        }
+    }
+)
+
+
+
+var tline=gsap.timeline();
+
+tline.from("#one",{
+    
+scrollTrigger:{
+scroller:'#wrapper',
+trigger:"#one",
+start:"top 25%",
+end:"20% 25%",
+pin:true,
+scrub:2,
+
+    
+
+
+
+},
+    x: -800,
+    opacity:1,
+    duration: 4,
+    delay:2,
+
+    ease: "linear"
+
+});
+
+
+tline.from("#two",{
+    
+    scrollTrigger:{
+    scroller:'#wrapper',
+    trigger:"#two",
+    start:"30% 25%",
+    end:"90% 30%",
+    pin:true,
+    scrub:4,
+
+        
+    
+    
+    
+    },
+        x: 700,
+        opacity:1,
+        duration: 7,
+        delay:3,
+    
+        ease: "linear"
+    
+    });
+    
+
+    
+    
+tline.from("#three",{
+    
+    scrollTrigger:{
+    scroller:'#wrapper',
+    trigger:"#three",
+    start:"20% 35%",
+    end:"90% 50%",
+    pin:true,
+    scrub:5,
+ 
+        
+    
+    
+    
+    },
+        x: -1000,
+        opacity:1,
+        duration: 7,
+        delay:3,
+    
+        ease: "linear"
+    
+    });
+    
+
+    
+tline.from("#four",{
+
+        x: 600,
+        opacity:1,
+        duration: 5,
+        delay:2,
+    
+    ease: "linear",
+
+    scrollTrigger:{
+    scroller:'#wrapper',
+    trigger:"#four",
+    start:"top 55%",
+    end:"25% 66%",
+ 
+    scrub:4,
+   
+ 
+        
+    
+    
+    
+    }
+       
+    
+    });
+    
+
+
+    
+    
+
+ScrollTrigger.addEventListener('refresh', () => scroller.update())
+
+
+ScrollTrigger.refresh()    
+
+ </script>
+
+
+
+
+
+
+ <script>
+
+
+    var muse=document.getElementById("cursor");
+     document.addEventListener("mousemove", function(details){
+
+        muse.style.left=`${details.x}px`;
+        muse.style.top=`${details.y}px`;
+
+
+
+} );
+
+
+</script>
+
+    
+</body>
+</html>
